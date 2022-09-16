@@ -1,9 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from rest_framework import generics
+from .models import *
+from .serializers import *
 
-from .models import Book
-
-
-class BookListView(ListView):
-    model = Book
-    template_name = "book_list.html"
+class BookAPIView(generics.ListAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer

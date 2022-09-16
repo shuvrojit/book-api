@@ -6,6 +6,7 @@ class Book(models.Model):
     subtitle = models.CharField(max_length=250)
     author = models.CharField(max_length=100)
     isbn = models.CharField(max_length=13)
+    description = models.CharField(max_length=500, null=True)
 
 
     def __str__(self):
