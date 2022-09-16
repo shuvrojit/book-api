@@ -1,0 +1,7 @@
+* Description
+
+Just a sample backend Rest framework setup using docker.
+
+RUN ~docker compose up -d --build~
+
+=0.0.0.0:8000/api=
